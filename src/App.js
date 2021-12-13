@@ -1,24 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header";
+import Product from "./components/Product";
+import Bascet from "./components/Bascet";
+import {BrowserRouter, Route} from "react-router-dom";
+import OneProduct from "./components/OneProduct";
+import Form from "./components/Form";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <div className="App">
+            <Header/>
+            <div className="wrapper">
+                <Route path='/product' render={()=> <Product/>}/>
+                <Route path='/bascet' render={()=> <Bascet/>}/>
+                <Route path='/productId/:id?' render={()=> <OneProduct/>}/>
+                <Route path='/form' render={()=> <Form/>}/>
+            </div>
+        </div>
+    </BrowserRouter>
   );
 }
 

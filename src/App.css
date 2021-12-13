@@ -1,38 +1,353 @@
+body *{
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  width: 100%;
+  background-color: dodgerblue;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+.logo {
+  font-size: 30px;
+  color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.link {
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.img {
+  max-width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerInfo {
+  display: flex;
+}
+
+.item {
+  margin: 10px;
+  width: 18%;
+  border: 3px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.item:hover {
+  border: 3px solid dodgerblue;
+}
+
+.item-info {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 30px;
+}
+
+.btn {
+  width: 90px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: dodgerblue;
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: #63abfa;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.bascetContainer {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bascetItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 2px solid black;
+  margin: 5px;
+}
+.bascetTitle {
+  font-size: 30px;
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+
+.changeValue {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.changeValueBtn {
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: dodgerblue;
+}
+
+.bascetPrice {
+  font-size: 30px;
+}
+
+.removeItem {
+  background-color: white;
+  color: black;
+  font-size: 30px;
+  width: 70px;
+  cursor: pointer;
+  border: none;
+}
+
+.itemTotal {
+  margin-top: 10px;
+  font-size: 25px;
+  display: flex;
+}
+.itemPrice {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+.order {
+  padding: 5px;
+  background-color: dodgerblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.active {
+  color: black;
+}
+
+.bascetLink {
+  position: relative;
+}
+
+.lenght {
+  width: 23px;
+  height: 23px;
+  font-size: 14px;
+  border: 2px solid white;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #0101ad;
+  color: white;
+  font-weight:bold;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.oneProductWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 50%;
+  display: flex;align-items: center;
+  justify-content: center;
+}
+
+.right {
+  margin-top: 50px;
+  width: 50%;
+}
+
+.titleName {
+  font-size: 50px;
+}
+
+.description {
+  width: 55%;
+  margin-top: 10px;
+}
+
+.priceName {
+  font-size: 40px;
+}
+
+.buyInfo {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.buy {
+  height: 50px;
+  margin-left: 10px;
+}
+
+.oneProductWrapperG {
+  width: 80%;
+}
+
+.back {
+  border: 1px solid black;
+  font-size: 20px;
+  background-color: dodgerblue;
+  border-radius: 5px;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.formContainer {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.foto {
+  max-width: 300px;
+  object-fit: cover;
+}
+
+.empty {
+  font-size: 30px;
+}
+
+.bascetInfo {
+  display: flex;
+}
+
+.formContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formName {
+  font-size: 23px;
+}
+
+.formWrapper {
+  padding: 10px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formInput {
+  width: 70%;
+  height: 30px;
+  padding: 5px;
+  font-size: 15px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.totalSum {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.totalSum span {
+  margin-left: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.sendBtn {
+  width: 49%;
+  font-size: 30px;
+  background-color: dodgerblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sendBtn:hover {
+  background-color: #479dfa;
+}
+
+.formContainerBlock {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.check {
+  width: 30%;
+  border: 2px solid black;
+  border-radius: 3px 10px 3px 10px;
+  padding: 10px;
+}
+
+.check {
+  -webkit-box-shadow: 9px 0px 12px 5px rgba(0,0,0,0.71);
+  box-shadow: 9px 0px 12px 5px rgba(0,0,0,0.71);
+}
+
+.check-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.formContainerBlocktwo {
+  width: 100%;
+  display: flex;
 }
